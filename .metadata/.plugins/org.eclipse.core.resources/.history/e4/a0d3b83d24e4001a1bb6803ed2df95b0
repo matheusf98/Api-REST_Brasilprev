@@ -1,0 +1,15 @@
+package br.com.gestao.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "convidado")
+public class Convidado {
+
+	@Id @GeneratedValue
+	private long id;
+	private String nome;
+	private String email;
+	private String telefone;
+}

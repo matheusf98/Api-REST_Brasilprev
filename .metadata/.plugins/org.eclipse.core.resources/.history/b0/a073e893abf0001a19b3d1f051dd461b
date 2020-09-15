@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Funcionario {
+
+	private String nome;
+	private int idade;
+	
+	public List<Funcionario> listar(String nome, int idade){
+		Funcionario fun = new Funcionario();
+		List<Funcionario> lista = new ArrayList<>();
+		fun.setNome(nome);
+		fun.setIdade(idade);
+		lista.add(fun);
+		lista.forEach(lista ->{
+			System.out.println(lista.getIdade());
+			System.out.println(lista.getIdade());
+		});
+		return lista;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+}

@@ -1,0 +1,39 @@
+1600119505376	Rename package 'br.com.brasilprev.Brasilprev'
+1600120199738	Move compilation unit
+1600120203850	Move compilation unit
+1600120206574	Move compilation unit
+1600120212553	Move compilation unit
+1600120218200	Move compilation unit
+1600120223147	Delete element
+1600120227968	Delete element
+1600124115444	Rename package 'br.com.gestao.colaboradores.controller'
+1600124153073	Rename package 'br.com.gestao.colaboradores.config'
+1600124223592	Rename package 'br.com.gestao.colaboradores.models'
+1600124242943	Rename package 'br.com.gestao.colaboradores.repository'
+1600124610732	Rename type 'ColaboradorController'
+1600124631489	Rename type 'ColaboradorRepository'
+1600124903734	Rename type 'collaboratorRepository'
+1600124942457	Rename resource 'colaborador'
+1600124988403	Rename resource 'formColaborador.html'
+1600125028221	Rename resource 'Collaborator'
+1600125373394	Rename type 'ColaboradoresApplication'
+1600125458720	Rename field 'nome'
+1600125503396	Rename field 'email'
+1600125727953	Rename field 'telefone'
+1600125807840	Rename type 'Colaboradores'
+1600126083095	Rename resource 'editaColaborador.html'
+1600126183605	Rename type 'collaboratorController'
+1600126199510	Rename type 'collaboratorsApplication'
+1600126209173	Rename type 'collaborator'
+1600129408238	Rename method 'edita'
+1600129444004	Rename method 'editaSave'
+1600129498434	Rename method 'listaColaboradores'
+1600133246201	Copy file
+1600133604545	Copy file
+1600144286495	Move package
+1600144345509	Move compilation unit
+1600144431213	Move package
+1600144441230	Move package
+1600144470323	Move folder
+1600144479429	Move file
+1600144482789	Move folder

@@ -1,0 +1,5 @@
+package gestao.colaboradores.springboot;
+
+public class IndexController {
+
+}

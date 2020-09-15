@@ -1,0 +1,66 @@
+package br.com.brasilprev.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import br.com.brasilprev.models.Collaborator;
+import br.com.brasilprev.repository.CollaboratorRepository;
+
+@Controller
+public class CollaboratorController {
+	
+	@Autowired
+	private CollaboratorRepository cr;
+	
+	@RequestMapping(value="/cadastrarColaborador", method= RequestMethod.GET)
+	public String form() {
+		
+		return "collaborator/formCollaborator";
+	}
+	
+	@RequestMapping(value="/cadastrarColaborador", method= RequestMethod.POST)
+	public String formSave( Collaborator colaboradores) {
+		cr.save(colaboradores);
+		
+		return "redirect:/collaborator";
+	}
+	
+	@RequestMapping(value="/editaColaborador", method= RequestMethod.GET)
+	public String edita(Long id) {
+		Collaborator colaboradores = cr.findByid(id);
+		return "collaborator/editContributor";
+	}
+	
+	@RequestMapping(value="/editaColaborador", method= RequestMethod.POST)
+	public String editaSave (Long id, String nome, String email, String cpf) {
+		Collaborator colaboradores = cr.findByid(id);
+	
+		colaboradores.setName(nome);
+		colaboradores.setCpf(cpf);
+		colaboradores.setAddress(email);
+
+		cr.save(colaboradores);
+		return "redirect:/collaborator";
+	}
+	
+	
+	@RequestMapping("/collaborator")
+	public ModelAndView listaColaboradores() {
+		ModelAndView mav = new ModelAndView("index");
+		Iterable<Collaborator> lista = cr.findAll();
+		mav.addObject("Collaborator", lista);
+		
+		return mav;
+	}
+	
+	@RequestMapping("/deletar")
+	public String deletarColaborador(Long id) {
+		Collaborator colaboradores = cr.findByid(id);
+		cr.delete(colaboradores);
+		return "redirect:/collaborator";
+	}
+	
+}

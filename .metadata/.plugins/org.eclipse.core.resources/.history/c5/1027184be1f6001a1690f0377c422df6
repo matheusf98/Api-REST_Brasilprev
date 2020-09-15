@@ -1,0 +1,9 @@
+package br.com.brasilprev.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.brasilprev.models.Colaboradores;
+
+public interface CollaboratorRepository extends CrudRepository<Colaboradores, String>{
+	Colaboradores findByid(long id);
+}

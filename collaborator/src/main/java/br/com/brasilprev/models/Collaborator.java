@@ -1,0 +1,69 @@
+package br.com.brasilprev.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.NotFound;
+
+@Entity
+public class Collaborator implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@NotFound
+	private String name;
+	
+	@NotFound
+	private String address;
+	
+	@NotFound
+	private String cpf;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Collaborator [id=" + id + ", name=" + name + ", address=" + address + ", CPF=" + cpf + "]";
+	}
+	
+	
+}

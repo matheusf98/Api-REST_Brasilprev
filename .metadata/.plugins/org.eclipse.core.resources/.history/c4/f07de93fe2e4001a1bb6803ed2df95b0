@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Colaboradores</title>
+</head>
+<body>
+	<h1>Lista De Colaboradores</h1>
+	<h3><a href="cadastrarColaborador">Cadastrar Colaborador</a></h3>
+	
+	<div th:each="colaboradores : ${colaboradores}">
+	<div class="rows">
+	
+	<p><span th:text="${colaboradores.nome}"></span></p>
+	<p><span th:text="${colaboradores.email}"></span></p>
+	<p><span th:text="${colaboradores.telefone}"></span></p>
+	
+	</div>
+	
+	</div>
+	
+	
+</body>
+</html>
